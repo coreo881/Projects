@@ -1,0 +1,15 @@
+Creating a custom wordpress theme from standard html&css.  There are tips and tricks to remember for the future.  Enjoy
+
+1. A new wordpress theme requires an index.php file and a style.css file to be noticed on the backend.
+
+2. A note about php: if you just have php in a .php file, then you only need a single opening php tag (<?php) at the top of the document.  If you have html and all that other bullshit, you'll need a closing tag.
+
+3. When adding a function to the "functions.php" file, always remember to add the action to the (tentatively named) action pallete via this code:
+
+4. When linking to css using functions.php, make sure that <?php wp_footer(); ?> AND <?php wp_head(); ?> are inserted before the closing body tag and the closing head tag respectively.
+
+5. You can link to any asset using this php tag: <?php bloginfo('template_url'); ?>
+
+The basic idea is that this tag refers to the theme's parent directory and then you can work your way down from there using regular path notation.
+
+But remember, this is still an image src attribute; everything inside of it must be in quotes or you may get errors.
